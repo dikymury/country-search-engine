@@ -1,0 +1,285 @@
+@font-face {font-family: "SF Pro Text"; src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot"); src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.svg#SF Pro Text") format("svg"); }
+*{
+    font-family: "SF Pro Text";
+}
+h1{
+    font-size: 72px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 43px;
+}
+.con-center{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.con-search{
+    position: relative;
+}
+.box-search{
+    width: 700px;
+    position: relative;
+
+    i{
+        position: absolute;
+        right: 25px;
+        top: 18px;
+        font-size: 20px;
+        color: #C8C8C8;
+        border: none !important;
+    }
+
+    .input-search{
+        width: 100%;
+        height: 56px;
+        border: 0.5px solid #C8C8C8;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 18px;
+        outline: none;
+        
+        &:focus + i{
+            color: rgba(124, 88, 245, 0.5);
+            border: 1px solid rgba(124, 88, 245, 0.5)
+        }
+        &:focus{
+            border: 1px solid rgba(117, 79, 241, 0.5)
+        }
+    }
+
+}
+.suggestions{
+    position: absolute;
+    top: 70px;
+    width: 700px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+
+    li{
+        padding: 8px 20px;
+        color: #000;
+
+        &:hover{
+            background-color: #F4F4F4;
+            cursor: pointer;
+        }
+    }
+
+    .not-found{
+        color: red;
+    }
+}
+
+.detail{
+    padding: 90px;
+    position: relative;
+
+    .nav-top{
+        margin-bottom: 75px;
+    }
+
+    .country{
+        margin-bottom: 30px;
+
+        .country-content{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            h1{
+                font-size: 48px;
+                margin: 0px;
+                padding: 0px;
+                margin-right: 10px;
+            }
+            img{
+                width: auto;
+                height: 30px;
+            }
+        }
+
+        .country-alias{
+            .ca-name{
+                background: #8DD5CC;
+                border-radius: 50px;
+                width: fit-content;
+                font-size: 12px;
+                line-height: 14.5px;
+                color: #fff;
+                padding: 5px 15px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// button
+.btn{
+    outline: none;
+    background-color: rgb(18, 7, 182);
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    background: #8362F2;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover{
+        background-color: #7148f8;
+    }
+} 
+
+.btn-primary{
+    background-color: rgb(18, 7, 182);
+}
+
+.btn-warning{
+    background-color: rgb(215, 226, 7);
+}
+
+// line card for address
+.address{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.card{
+    padding: 25px;
+    width: calc(50% - 45px);
+    background: #FFFFFF;
+    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.02), 4px 4px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    margin: 0px 20px 20px 0px;
+}
+.card-ll{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #8362F2;
+}
+.card-bg-ll{
+    background-image: url('~@/assets/img/globe.svg');
+    background-repeat: no-repeat;
+    background-size: auto 150%;
+    background-position: right 15px;
+}
+.card-line-label{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 4px;
+    color: #000;
+
+    span:first-child{
+        margin-right: 3px;
+    }
+
+    span:last-child{
+        font-weight: 700;
+    }
+}
+
+// line card for another identity 
+.country-id{
+    width: 100%;
+    display: flex;
+}
+
+.card-id{
+    margin: 0px 20px 20px 0px;
+    width: calc(50% - 20px);
+    .ci-label{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+    }
+    .ci-content{
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 57px;
+        color: #8362F2;
+        margin: 10px 0px;
+    }
+    .ci-desc{
+        font-size: 14px;
+        line-height: 17px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        font-weight: 500;
+
+        .tooltip{
+            position: relative;
+            color: #8362F2;
+            cursor: pointer;
+            text-decoration-line: underline;
+
+            .show-tooltip{
+                position: absolute;
+                top: 25px;
+                padding: 10px;
+                color: #fff;
+                cursor: pointer;
+                background: #525252;
+                border-radius: 10px;
+                min-width: 200px;
+
+                .st-content{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+// responsive setting
+@media (max-width:750px){
+    h1{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .box-search,.suggestions{
+        width:300px
+    }
+    .btn{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .detail{
+        padding: 5px;
+
+        .nav-top{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .country .country-content h1{
+            font-size: 30px;
+        }
+    }
+    .address{
+        display: block;
+    }
+
+    .country-id{
+        display: block;
+    }
+    .card{
+        width: calc(100% - 45px);
+    }
+    .card-id{
+        width: calc(100% - 20px);
+    }
+}
